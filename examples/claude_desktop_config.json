@@ -1,0 +1,14 @@
+{
+  "_comment": "Copy the mcpServers block into your claude_desktop_config.json. Use an ABSOLUTE path to the virtualenv python - Claude Desktop does not inherit your shell environment.",
+  "mcpServers": {
+    "servicenow-itsm": {
+      "command": "/absolute/path/to/servicenow-mcp-agent/.venv/bin/python",
+      "args": ["-m", "snow_mcp.server"],
+      "env": {
+        "SNOW_BACKEND": "mock",
+        "SNOW_READ_ONLY": "0",
+        "SNOW_MAX_RESULTS": "20"
+      }
+    }
+  }
+}
